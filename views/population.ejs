@@ -1,0 +1,26 @@
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/nav.ejs") %>
+
+    <div class="api content">
+      <h2>Current population</h2>
+      <div>
+        <table>
+          <tr>
+            <th>Country</th>
+            <th>population</th>
+          </tr>
+          <%Object.keys(list).forEach(function(key){ %>
+          <tr>
+            <td><%= key %></td>
+            <td><%= list[key] %></td>
+          </tr>
+          <% }) %>
+        </table>
+      </div>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
